@@ -19,26 +19,7 @@ echo "
     <h1>welcome to this page</h1>
 </center>
 <p style='display:none;' id='ipTag'> $ip </p>
-<script>
-    // ID IP HOURS
-    var time = new Date();
-    var unixTime = time.getTime();
-    var hours = time.getHours();
-    var minutes = time.getMinutes();
-    var ip = document.getElementById('ipTag').innerText;
-    alert(hours + ':' + minutes + ' ip adresi : ' + ip);
-
-    $.ajax({
-        type: 'POST',
-        url: 'analize.php',
-        data: {
-            id: unixTime,
-            hour: hours,
-            minute: minutes,
-            ip: ip
-        }
-    });
-</script>
+<script src='script.js'></script>
 </html>
 ";
 ?>
